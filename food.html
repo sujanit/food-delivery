@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FOOD CART</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="food.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-utensils"></i>
+        FOOD CART
+    </div>
+
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('restaurants')">Restaurants</a>
+        <a href="#" onclick="showPage('menu')">Menu</a>
+        <a href="#" onclick="showPage('offers')">Offers</a>
+
+        <a href="#" onclick="showPage('cart')">
+            Cart
+            <span id="cartCount">0</span>
+        </a>
+
+        <a href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="page active">
+
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                + FRESH • FAST • DELICIOUS
+            </p>
+
+            <h1>
+                Your cravings.<br>
+                <span>Our restaurants.</span>
+            </h1>
+
+            <p class="hero-text">
+                Order delicious food from your favourite restaurants
+                and get everything delivered to your doorstep.
+            </p>
+
+            <button onclick="showPage('restaurants')" class="orange-btn">
+                Explore Restaurants →
+            </button>
+
+            <button onclick="showPage('offers')" class="white-btn">
+                View Offers
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80">
+
+            <div class="rating">
+                ⭐ 4.9 Rating
+            </div>
+
+            <div class="delivery">
+                🚀 Fast Delivery
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="features">
+
+        <div>
+            <span>🚀</span>
+            <h3>Fast Delivery</h3>
+            <p>Hot food at your doorstep.</p>
+        </div>
+
+        <div>
+            <span>🏪</span>
+            <h3>Many Restaurants</h3>
+            <p>Choose from multiple restaurants.</p>
+        </div>
+
+        <div>
+            <span>📚</span>
+            <h3>Huge Menu</h3>
+            <p>Thousands of tasty choices.</p>
+        </div>
+
+        <div>
+            <span>💳</span>
+            <h3>Easy Payment</h3>
+            <p>Multiple payment options.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= RESTAURANTS ================= -->
+
+<section id="restaurants" class="page">
+
+    <div class="page-heading">
+
+        <h1>Restaurants near you</h1>
+
+        <p>
+            Choose a restaurant and explore its delicious menu.
+        </p>
+
+        <input
+            type="text"
+            id="restaurantSearch"
+            placeholder="🔍 Search restaurants or cuisines..."
+            onkeyup="searchRestaurants()"
+        >
+
+    </div>
+
+
+    <div class="restaurant-grid" id="restaurantGrid">
+
+        <div class="restaurant-card">
+
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
+
+            <h3>Zesto Kitchen</h3>
+
+            <p>North Indian • Chinese • Fast Food</p>
+
+            <div class="restaurant-info">
+                <span>⭐ 4.4</span>
+                <span>🕐 25–35 min</span>
+            </div>
+
+            <button onclick="showPage('menu')">
+                View Menu →
+            </button>
+
+        </div>
+
+
+        <div class="restaurant-card">
+
+            <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f">
+
+            <h3>Royal Biryani House</h3>
+
+            <p>Biryani • Mughlai • Kebabs</p>
+
+            <div class="restaurant-info">
+                <span>⭐ 4.7</span>
+                <span>🕐 30–40 min</span>
+            </div>
+
+            <button onclick="showPage('menu')">
+                View Menu →
+            </button>
+
+        </div>
+
+
+        <div class="restaurant-card">
+
+            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+
+            <h3>South Spice</h3>
+
+            <p>South Indian • Dosa • Meals</p>
+
+            <div class="restaurant-info">
+                <span>⭐ 4.6</span>
+                <span>🕐 20–25 min</span>
+            </div>
+
+            <button onclick="showPage('menu')">
+                View Menu →
+            </button>
+
+        </div>
+
+
+        <div class="restaurant-card">
+
+            <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498">
+
+            <h3>Pizza House</h3>
+
+            <p>Pizza • Pasta • Italian</p>
+
+            <div class="restaurant-info">
+                <span>⭐ 4.5</span>
+                <span>🕐 25–30 min</span>
+            </div>
+
+            <button onclick="showPage('menu')">
+                View Menu →
+            </button>
+
+        </div>
+
+
+        <div class="restaurant-card">
+
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+
+            <h3>Burger Bam</h3>
+
+            <p>Burgers • Fries • Fast Food</p>
+
+            <div class="restaurant-info">
+                <span>⭐ 4.7</span>
+                <span>🕐 20–30 min</span>
+            </div>
+
+            <button onclick="showPage('menu')">
+                View Menu →
+            </button>
+
+        </div>
+
+
+        <div class="restaurant-card">
+
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19">
+
+            <h3>Dragon Wok</h3>
+
+            <p>Chinese • Noodles • Rice</p>
+
+            <div class="restaurant-info">
+                <span>⭐ 4.4</span>
+                <span>🕐 30–35 min</span>
+            </div>
+
+            <button onclick="showPage('menu')">
+                View Menu →
+            </button>
+
+        </div>
+
+
+        <div class="restaurant-card">
+
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5">
+
+            <h3>Cafe Bliss</h3>
+
+            <p>Desserts • Coffee • Shakes</p>
+
+            <div class="restaurant-info">
+                <span>⭐ 4.8</span>
+                <span>🕐 15–20 min</span>
+            </div>
+
+            <button onclick="showPage('menu')">
+                View Menu →
+            </button>
+
+        </div>
+
+
+        <div class="restaurant-card">
+
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947">
+
+            <h3>Tandoori Nation</h3>
+
+            <p>Tandoori • Starters • North Indian</p>
+
+            <div class="restaurant-info">
+                <span>⭐ 4.6</span>
+                <span>🕐 30–40 min</span>
+            </div>
+
+            <button onclick="showPage('menu')">
+                View Menu →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= MENU ================= -->
+
+<section id="menu" class="page">
+
+    <div class="menu-top">
+
+        <div class="ordering">
+            🍴 Ordering from <b>Food Cart</b>
+        </div>
+
+        <button class="orange-btn"
+                onclick="showPage('restaurants')">
+            Show All Restaurants
+        </button>
+
+    </div>
+
+
+    <div class="menu-search">
+
+        <input
+            type="text"
+            id="foodSearch"
+            placeholder="🔍 Search pizza, biryani, dosa..."
+            onkeyup="searchFood()"
+        >
+
+    </div>
+
+
+    <div class="restaurant-tabs">
+
+        <button>🍴 All Restaurants</button>
+        <button class="selected">Food Cart</button>
+        <button>Royal Biryani House</button>
+        <button>South Spice</button>
+        <button>Pizza House</button>
+        <button>Burger Bam</button>
+        <button>Dragon Wok</button>
+        <button>Cafe Bliss</button>
+        <button>Tandoori Nation</button>
+
+    </div>
+
+
+    <div class="categories">
+
+        <button class="active-cat">All</button>
+        <button>🍕 Pizza</button>
+        <button>🍔 Burgers</button>
+        <button>🍛 Biryani</button>
+        <button>🥘 South Indian</button>
+        <button>🍜 Chinese</button>
+        <button>🍗 Starters</button>
+        <button>🍟 Snacks</button>
+        <button>🍰 Desserts</button>
+        <button>🥤 Drinks</button>
+
+    </div>
+
+
+    <div class="food-grid" id="foodGrid">
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1630383249896-424e482df921">
+
+            <div class="food-content">
+
+                <h3>Masala Dosa</h3>
+
+                <b>Food Cart</b>
+
+                <p>Crispy dosa filled with potato masala.</p>
+
+                <div class="food-bottom">
+
+                    <strong>₹100</strong>
+
+                    <button onclick="addToCart('Masala Dosa',100,
+                    'https://images.unsplash.com/photo-1630383249896-424e482df921')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1626132647523-66e5bfce5a65">
+
+            <div class="food-content">
+
+                <h3>Ghee Roast Dosa</h3>
+
+                <b>Food Cart</b>
+
+                <p>Golden crispy dosa roasted with ghee.</p>
+
+                <div class="food-bottom">
+
+                    <strong>₹120</strong>
+
+                    <button onclick="addToCart('Ghee Roast Dosa',120,
+                    'https://images.unsplash.com/photo-1626132647523-66e5bfce5a65')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0">
+
+            <div class="food-content">
+
+                <h3>Idli Sambar</h3>
+
+                <b>Food Cart</b>
+
+                <p>Soft idlis served with hot sambar.</p>
+
+                <div class="food-bottom">
+
+                    <strong>₹80</strong>
+
+                    <button onclick="addToCart('Idli Sambar',80,
+                    'https://images.unsplash.com/photo-1589302168068-964664d93dc0')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7">
+
+            <div class="food-content">
+
+                <h3>Medu Vada</h3>
+
+                <b>Food Cart</b>
+
+                <p>Crispy vada served with chutney.</p>
+
+                <div class="food-bottom">
+
+                    <strong>₹85</strong>
+
+                    <button onclick="addToCart('Medu Vada',85,
+                    'https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+
+            <div class="food-content">
+
+                <h3>Veg Pizza</h3>
+
+                <b>Food Cart</b>
+
+                <p>Fresh pizza with vegetables and cheese.</p>
+
+                <div class="food-bottom">
+
+                    <strong>₹180</strong>
+
+                    <button onclick="addToCart('Veg Pizza',180,
+                    'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+
+            <div class="food-content">
+
+                <h3>Classic Burger</h3>
+
+                <b>Food Cart</b>
+
+                <p>Juicy burger with fresh vegetables.</p>
+
+                <div class="food-bottom">
+
+                    <strong>₹150</strong>
+
+                    <button onclick="addToCart('Classic Burger',150,
+                    'https://images.unsplash.com/photo-1568901346375-23c9450c58cd')">
+                        + Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CART ================= -->
+
+<section id="cart" class="page">
+
+    <div class="cart-heading">
+
+        <p>YOUR ORDER</p>
+
+        <h1>Your Cart</h1>
+
+        <span>
+            You can order from multiple restaurants in one cart.
+        </span>
+
+    </div>
+
+
+    <div id="cartItems" class="cart-container">
+
+        <!-- JavaScript will create cart items -->
+
+    </div>
+
+
+    <div class="bill">
+
+        <div>
+            <span>Subtotal</span>
+            <strong id="subtotal">₹0</strong>
+        </div>
+
+        <div>
+            <span>Delivery</span>
+            <strong id="delivery">₹40</strong>
+        </div>
+
+        <hr>
+
+        <div class="total">
+            <span>Total</span>
+            <strong id="total">₹0</strong>
+        </div>
+
+    </div>
+
+
+    <div class="cart-buttons">
+
+        <button class="clear-btn" onclick="clearCart()">
+            Clear Cart
+        </button>
+
+        <button class="orange-btn"
+                onclick="checkout()">
+            Proceed to Checkout →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<section id="checkout" class="page">
+
+    <div class="checkout-container">
+
+        <div class="order-summary">
+
+            <h3>🛒 Order Summary</h3>
+
+            <div id="checkoutItems"></div>
+
+        </div>
+
+
+        <form id="checkoutForm">
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>Phone Number</label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Enter phone number"
+                required
+            >
+
+
+            <label>Delivery Address</label>
+
+            <textarea
+                id="address"
+                placeholder="Enter delivery address"
+                required
+            ></textarea>
+
+
+            <label>Delivery Time</label>
+
+            <select id="deliveryTime">
+
+                <option>As soon as possible</option>
+                <option>Within 30 minutes</option>
+                <option>Within 1 hour</option>
+                <option>Schedule for later</option>
+
+            </select>
+
+
+            <label>Payment Method</label>
+
+            <select id="payment">
+
+                <option>💳 UPI</option>
+                <option>💵 Cash on Delivery</option>
+                <option>💳 Credit / Debit Card</option>
+
+            </select>
+
+
+            <div class="payable">
+
+                <span>Amount Payable</span>
+
+                <strong id="payableAmount">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="checkout-buttons">
+
+                <button
+                    type="button"
+                    class="back-btn"
+                    onclick="showPage('cart')">
+                    ← Back to Cart
+                </button>
+
+                <button type="submit"
+                        class="orange-btn">
+                    Place Order ✓
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONFIRMATION ================= -->
+
+<section id="confirmation" class="page">
+
+    <div class="confirmation-box">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <p class="confirmed">
+            ORDER CONFIRMED
+        </p>
+
+        <h1>Your order is on its way!</h1>
+
+        <p>
+            Thank you for ordering with FOOD CART.
+        </p>
+
+
+        <div class="order-details">
+
+            <h3>Order Details</h3>
+
+            <p>
+                <b>Order ID:</b>
+                <span id="orderId"></span>
+            </p>
+
+            <p>
+                <b>Name:</b>
+                <span id="confirmName"></span>
+            </p>
+
+            <p>
+                <b>Phone:</b>
+                <span id="confirmPhone"></span>
+            </p>
+
+            <p>
+                <b>Payment:</b>
+                <span id="confirmPayment"></span>
+            </p>
+
+            <p>
+                <b>Restaurants:</b>
+                South Spice
+            </p>
+
+            <p>
+                <b>Total:</b>
+                <span id="confirmTotal"></span>
+            </p>
+
+        </div>
+
+
+        <button class="orange-btn"
+                onclick="showPage('menu')">
+            Order More Food
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OFFERS ================= -->
+
+<section id="offers" class="page">
+
+    <div class="simple-page">
+
+        <h1>Special Offers 🎉</h1>
+
+        <div class="offer-card">
+            <h2>50% OFF</h2>
+            <p>Get 50% off on your first order.</p>
+            <button onclick="showPage('menu')">
+                Order Now
+            </button>
+        </div>
+
+        <div class="offer-card">
+            <h2>FREE DELIVERY 🚀</h2>
+            <p>Free delivery on orders above ₹499.</p>
+            <button onclick="showPage('menu')">
+                Order Now
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="page">
+
+    <div class="simple-page">
+
+        <h1>Contact Us</h1>
+
+        <div class="contact-box">
+
+            <p>📞 +91 98765 43210</p>
+
+            <p>📧 support@foodcart.com</p>
+
+            <p>📍 Chennai, Tamil Nadu</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script src="food.js"></script>
+
+</body>
+</html>
