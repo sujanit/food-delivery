@@ -1,1 +1,1 @@
-https://food-delivery-0db3.onrender.com/
+verxel link: https://food-delivery-lilac-six.vercel.app/
